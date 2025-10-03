@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link href="styles.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Montserrat:wght@600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div id="portfolio-app" class="min-h-screen bg-background text-foreground transition-colors duration-300">
+    <!-- Navigation -->
+    <nav class="flex justify-between items-center p-6 border-b border-border">
+      <h1 class="text-xl font-bold text-primary">My Portfolio</h1>
+      <div class="flex items-center space-x-6">
+        <a href="#home" class="hover:text-primary transition-colors">Home</a>
+        <a href="#about" class="hover:text-primary transition-colors">About Me</a>
+        <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+        <button id="theme-toggle" class="p-2 rounded-md bg-secondary hover:bg-accent transition-colors" aria-label="Toggle dark mode">
+          <span id="theme-icon">🌙</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="py-20 px-6 text-center reveal">
+      <div class="max-w-3xl mx-auto">
+        <img 
+          src="487084594_9594535190592024_281857136368191727_n.jpg" 
+          alt="friendly smile"
+          class="w-48 h-48 rounded-full mx-auto mb-6 object-cover"
+        />
+        <h2 class="text-4xl font-bold mb-4">Hello, I'm Pamela Lyka C. Navarra</h2>
+        <p class="text-2xl text-muted-foreground">
+          4th Year BSIT Student
+        </p>
+      </div>
+    </section>
+
+<!-- About Me Section -->
+<section id="about" class="py-16 px-6 bg-muted reveal font-[Poppins]">
+  <div class="max-w-3xl mx-auto">
+    <div class="flex items-center justify-between mb-6">
+      <h3 class="text-3xl font-bold">About Me</h3>
+      <button id="edit-toggle" class="px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors">
+        Edit
+      </button>
+    </div>
+    
+    <!-- Display Mode -->
+    <div id="about-content-display">
+      <p id="about-text" class="text-lg leading-relaxed">
+        Hi! I'm an IT student with a growing passion for technology and a love for learning new skills. 
+        My journey in the world of IT has just begun, but I am eager to explore all that it has to offer. 
+        I am currently focused on building a strong foundation in essential tech areas, from coding to web design.  
+        With a strong interest in web development, software design, and technology innovation, 
+        I enjoy creating projects that combine creativity and functionality, and I’m continuously 
+        learning new tools and frameworks to improve my skills.  
+        My goal is to become a professional developer who can contribute to building efficient, 
+        user-friendly, and impactful digital solutions.
+    </div>
+    
+    <!-- Edit Mode -->
+    <div id="about-content-edit" class="hidden">
+      <textarea
+        id="about-textarea"
+        class="w-full p-4 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary font-[Poppins]"
+        rows="6"
+      ></textarea>
+    </div>
+  </div>
+</section>
+
+<!-- Social Media Section -->
+<section class="py-16 px-6 reveal">
+  <div class="max-w-3xl mx-auto">
+    <h3 class="text-2xl font-bold mb-8 text-center">Social Media</h3>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/exissspam" target="_blank" class="bg-secondary p-6 rounded-md flex flex-col items-center hover:bg-secondary/80 transition">
+        <i class="fab fa-facebook text-4xl mb-2 text-blue-600"></i>
+        <h4 class="font-semibold">Facebook</h4>
+      </a>
+
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/exissspam/" target="_blank" class="bg-secondary p-6 rounded-md flex flex-col items-center hover:bg-secondary/80 transition">
+        <i class="fab fa-instagram text-4xl mb-2 text-pink-500"></i>
+        <h4 class="font-semibold">Instagram</h4>
+      </a>
+
+      <!-- Spotify -->
+      <a href="https://open.spotify.com/user/z7zlzr8uc8bqp2qceml9394g6" target="_blank" class="bg-secondary p-6 rounded-md flex flex-col items-center hover:bg-secondary/80 transition">
+        <i class="fab fa-spotify text-4xl mb-2 text-green-700"></i>
+        <h4 class="font-semibold">Spotify</h4>
+      </a>
+
+      <!-- GitHub -->
+      <a href="https://github.com/exis8" target="_blank" class="bg-secondary p-6 rounded-md flex flex-col items-center hover:bg-secondary/80 transition">
+        <i class="fab fa-github text-4xl mb-2 text-gray-800"></i>
+        <h4 class="font-semibold">GitHub</h4>
+      </a>
+
+    </div>
+  </div>
+</section>
+   <!-- Projects Section -->
+<section class="py-16 px-6 bg-muted reveal">
+  <div class="max-w-4xl mx-auto">
+    <h3 class="text-2xl font-bold mb-8 text-center">Certificate</h3>
+    <div class="grid md:grid-cols-2 gap-6">
+      
+      <!-- Certificate Card -->
+      <div class="bg-background p-6 rounded-lg shadow-md text-center">
+        <img 
+          src="SoloLEARN HTML.jpg" 
+          alt="Certificate in HTML"
+          class="w-[400px] h-[300px] object-cover rounded-md mx-auto mb-4"
+        />
+        <h4 class="text-xl font-semibold mb-2">Introduction to HTML</h4>
+      </div>
+
+      <!-- Second Certificate -->
+      <div class="bg-background p-6 rounded-lg shadow-md text-center">
+        <img 
+          src="SoloLEARN CSS.jpg" 
+          alt="Task Manager Certificate"
+          class="w-[400px] h-[300px] object-cover rounded-md mx-auto mb-4"
+        />
+        <h4 class="text-xl font-semibold mb-2">Introduction to CSS</h4>
+      </div>
+
+      <!-- Third Certificate -->
+      <div class="bg-background p-6 rounded-lg shadow-md text-center">
+        <img 
+          src="SoloLEARN JavaScript.jpg" 
+          alt="Analytics Certificate"
+          class="w-[400px] h-[300px] object-cover rounded-md mx-auto mb-4"
+        />
+        <h4 class="text-xl font-semibold mb-2">Introdiction to JavaScript</h4>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-6 reveal">
+      <div class="max-w-3xl mx-auto">
+        <h3 class="text-2xl font-bold mb-8 text-center">Get In Touch</h3>
+        <form class="space-y-6">
+          <div>
+            <label for="name" class="block mb-2 font-medium">
+              Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              class="w-full p-3 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+              placeholder="Your name"
+            />
+          </div>
+          <div>
+            <label for="email" class="block mb-2 font-medium">
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              class="w-full p-3 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+              placeholder="your.email@example.com"
+            />
+          </div>
+          <div>
+            <label for="message" class="block mb-2 font-medium">
+              Message
+            </label>
+            <textarea
+              id="message"
+              rows="4"
+              class="w-full p-3 bg-background border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+              placeholder="Your message..."
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="w-full py-3 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 px-6 border-t border-border text-center text-muted-foreground reveal">
+      <p>© <span id="current-year"></span> My Portfolio. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
